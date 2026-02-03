@@ -38,6 +38,8 @@ body {
   padding: 28px 24px 32px;
   backdrop-filter: blur(6px);
   border: 1px solid #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -140,4 +142,30 @@ h1 {
   h1 { font-size: 1.9rem; }
   .question { font-size: 1.1rem; }
   .buttons { height: min(220px, 52vh); }
+}
+
+/* Miffy GIFs */
+.miffy {
+  position: fixed;
+  bottom: 12px;
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.miffy-left {
+  left: 12px;
+}
+
+.miffy-right {
+  right: 12px;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 360px) {
+  .miffy {
+    width: 96px;
+    bottom: 8px;
+  }
 }
